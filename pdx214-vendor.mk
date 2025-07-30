@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/pdx214/proprietary/system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.ims.rcsservice.xml \
     vendor/sony/pdx214/proprietary/system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml \
     vendor/sony/pdx214/proprietary/system_ext/etc/seccomp_policy/tcmd.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/tcmd.policy \
-    vendor/sony/pdx214/proprietary/system_ext/etc/seccomp_policy/wfdservice.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice.policy \
+    vendor/sony/pdx214/proprietary/system_ext/etc/seccomp_policy/wfdservice64.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice64.policy \
     vendor/sony/pdx214/proprietary/system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_telephony_system_packages_config.xml \
     vendor/sony/pdx214/proprietary/system_ext/etc/sysconfig/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml \
     vendor/sony/pdx214/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
@@ -2269,32 +2269,10 @@ PRODUCT_PACKAGES += \
     fm_helium \
     libfm-hci \
     libimsmedia_jni \
-    libmmosal \
-    libmmparser_lite \
-    libmmrtpdecoder \
-    libmmrtpencoder \
-    libwfdclient \
-    libwfdcommonutils \
-    libwfdconfigutils \
-    libwfddisplayconfig \
-    libwfdmminterface \
-    libwfdmmsink \
-    libwfdrtsp \
-    libwfdsinksm \
-    libwfduibcinterface \
-    libwfduibcsink \
-    libwfduibcsinkinterface \
-    libwfduibcsrc \
-    libwfduibcsrcinterface \
     vendor.qti.diaghal@1.0 \
     vendor.qti.hardware.audiohalext@1.0 \
     vendor.qti.hardware.fm@1.0 \
     vendor.qti.hardware.tui_comm@1.0 \
-    com.qualcomm.qti.wifidisplayhal@1.0 \
-    libwfdavenhancements \
-    libwfdmmsrc_system \
-    libwfdservice \
-    vendor.qti.hardware.wifidisplaysession@1.0 \
     com.qualcomm.qti.dpm.api@1.0 \
     com.qualcomm.qti.imscmservice@1.0 \
     com.qualcomm.qti.imscmservice@2.0 \
@@ -2317,7 +2295,27 @@ PRODUCT_PACKAGES += \
     libdpmframework \
     libdpmtcm \
     libimscamera_jni \
+    libmmosal \
+    libmmparser_lite \
+    libmmrtpdecoder \
+    libmmrtpencoder \
+    libwfdavenhancements \
+    libwfdclient \
+    libwfdcommonutils \
+    libwfdconfigutils \
+    libwfddisplayconfig \
+    libwfdmminterface \
+    libwfdmmsink \
+    libwfdmmsrc_system \
     libwfdnative \
+    libwfdrtsp \
+    libwfdservice \
+    libwfdsinksm \
+    libwfduibcinterface \
+    libwfduibcsink \
+    libwfduibcsinkinterface \
+    libwfduibcsrc \
+    libwfduibcsrcinterface \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
     vendor.qti.hardware.data.cne.internal.constants@1.0 \
     vendor.qti.hardware.data.cne.internal.server@1.0 \
@@ -2328,6 +2326,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.qmi@1.0 \
     vendor.qti.hardware.dpmservice@1.0 \
     vendor.qti.hardware.qseecom@1.0 \
+    vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk \
+    vendor.qti.hardware.wifidisplaysession@1.0 \
     vendor.qti.ims.callinfo@1.0 \
     vendor.qti.ims.rcsconfig@1.0 \
     vendor.qti.ims.rcsconfig@1.1 \
@@ -2477,6 +2477,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     odm_etc_acdbdata_adsp_avs_config_acdb \
+    system_ext_priv-app_WfdService_lib_arm64_libwfdnative_so \
     vendor_firmware_bdwlan_e47 \
     vendor_firmware_bdwlan_e48 \
     vendor_firmware_bdwlan_elf \
